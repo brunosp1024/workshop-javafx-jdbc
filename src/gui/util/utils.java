@@ -12,5 +12,14 @@ public class utils {
 		return (Stage) ((Node) event.getSource()).getScene().getWindow();
 	}
 	
+	//Transforma uma string em inteiro
+	public static Integer tryParseToInt(String str) {
+		try {
+			return Integer.parseInt(str);
+		}
+		catch (NumberFormatException e) {
+			return null; //Retorna null se a str não for um número válido.
+		}
+	}
 
 }
